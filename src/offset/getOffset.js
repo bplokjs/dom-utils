@@ -1,10 +1,10 @@
-export default function getOffset(elem){
+export default function getOffset(elem) {
 	let rect, win;
 	// Return zeros for disconnected and hidden (display: none) elements (gh-2310)
 	// Support: IE <=11 only
 	// Running getBoundingClientRect on a
 	// disconnected node in IE throws an error
-	if ( !elem.getClientRects().length ) {
+	if (!elem.getClientRects().length) {
 		return { top: 0, left: 0 };
 	}
 

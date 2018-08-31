@@ -20,5 +20,8 @@
   "devDependencies": {
     "jest": "^23.5.0",
     "transform-es": "^1.3.1"
+  },
+  "dependencies": {
+    "dom-helpers": "^3.3.1"
   }
 }

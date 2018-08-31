@@ -1,15 +1,15 @@
 const class2type = {};
 const toString = class2type.toString;
 
-"Boolean Number String Function Array Date RegExp Object Error Symbol Set Map NodeList".split( " " ).forEach(name => class2type[ "[object " + name + "]" ] = name.toLowerCase());
-	
-export default function typeOf( obj ) {
-	if ( obj == null ) {
+"Boolean Number String Function Array Date RegExp Object Error Symbol Set Map NodeList".split(" ").forEach(name => class2type["[object " + name + "]"] = name.toLowerCase());
+
+export default function typeOf(obj) {
+	if (obj == null) {
 		return obj + "";
 	}
 
 	// Support: Android <=2.3 only (functionish RegExp)
 	return typeof obj === "object" || typeof obj === "function" ?
-		class2type[ toString.call( obj ) ] || "object" :
+		class2type[toString.call(obj)] || "object" :
 		typeof obj;
 }
