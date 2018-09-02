@@ -9,23 +9,30 @@ export default function scrollIntoView(el, scrollParent) {
 
     const pTop = pOffset.top,
         pLeft = pOffset.left,
-        pBottom = pOffset.top + scrollview.offsetHeight,
-        pRight = pOffset.left + scrollview.offsetWidth,
+        pBottom = pOffset.top + scrollview.clientHeight,
+        pRight = pOffset.left + scrollview.clientWidth,
         tTop = tOffset.top,
         tLeft = tOffset.left;
 
     const sTop = scrollview.scrollTop,
         sLeft = scrollview.scrollLeft;
 
+    let left, top;
+
     if (pTop > tTop) {
-        scrollview.scrollTop = sTop - (pTop - tTop);
+        top = sTop - (pTop - tTop);
     } else if (pBottom < (tTop + el.offsetHeight)) {
-        scrollview.scrollTop = sTop + tTop - pBottom + Math.min(el.offsetHeight, scrollview.clientHeight);
+        top = sTop + tTop - pBottom + Math.min(el.offsetHeight, scrollview.clientHeight);
     }
 
     if (pLeft > tLeft) {
-        scrollview.scrollLeft = sLeft - (pLeft - tLeft);
+        left = sLeft - (pLeft - tLeft);
     } else if (pRight < (tLeft + el.offsetWidth)) {
-        scrollview.scrollLeft = sLeft + tLeft - pRight + Math.min(el.offsetWidth, scrollview.clientWidth);
+        left = sLeft + tLeft - pRight + Math.min(el.offsetWidth, scrollview.clientWidth);
     }
+
+    scrollview.scrollTop = top;
+    scrollview.scrollLeft = left;
+
+    return { left, top };
 }
