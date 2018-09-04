@@ -13,7 +13,6 @@
     },
     "files": [
         "lib",
-        "*.js",
         "*.md"
     ],
     "author": "nobo.zhou@foxmail.com",
