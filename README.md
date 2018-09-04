@@ -1,5 +1,10 @@
 # nil-dom-helpers
 
+## 安装
+
+`npm install --save nil-dom-helpers`
+
+## API
 
 - css
 
@@ -55,3 +60,26 @@
     `const matches = require('nil-dom-helpers/matches')`
 
     - `matches(element, selector)`
+
+- events
+
+    `const { on, off, filter, listen } = require('nil-dom-helpers/events')`
+
+    - `on(element, eventName, handler, capture)` 
+    - `off(element, eventName, handler, capture)` 
+    - `var unlisten = listen(element, eventName, handler, capture)` 
+    - `filter(selector, handler)`
+
+    `listen(element, 'click', filter( '.test', handler ))`
+
+- scrollIntoView
+    
+    `scrollIntoView(element, [scrollParent])`
+
+- scrollBarSize
+
+    `scrollBarSize()`
+
+- domReady
+
+    `domReady(fn)`

@@ -17,7 +17,6 @@ describe('scrollIntoView', () => {
     it("getOffset", () => {
         scrollview.scrollTop = 100;
         const pos = offset(el);
-        console.log(pos);
         expect(pos.top).toBe(408);
         expect(pos.left).toBe(508);
     })
@@ -25,7 +24,6 @@ describe('scrollIntoView', () => {
     it("getOffset", () => {
         scrollview.scrollTop = 9999;
         const pos = offset(el);
-        console.log(pos);
         expect(pos.top).toBe(-159);
     })
 

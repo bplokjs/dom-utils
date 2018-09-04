@@ -17,14 +17,14 @@ describe('scrollIntoView', () => {
     it("position", () => {
         scrollview.scrollTop = 100;
         const pos = position(el);
-        expect(pos.top).toBe(300);
+        expect(pos.top).toBe(400);
         expect(pos.left).toBe(400);
     })
 
     it("position", () => {
         scrollview.scrollTop = 9999;
         const pos = position(el);
-        expect(pos.top).toBe(-267);
+        expect(pos.top).toBe(400);
     })
 
 })
