@@ -1,5 +1,5 @@
 {
-    "name": "nil-dom-helpers",
+    "name": "bplokjs-dom-utils",
     "version": "1.0.0",
     "description": "",
     "main": "lib/index.js",
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bplok20010/nil-dom-helpers.git"
+        "url": "git+https://github.com/bplokjs/dom-utils.git"
     },
     "files": [
         "lib",
@@ -18,9 +18,9 @@
     "author": "nobo.zhou@foxmail.com",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/bplok20010/nil-dom-helpers/issues"
+        "url": "https://github.com/bplokjs/dom-utils/issues"
     },
-    "homepage": "https://github.com/bplok20010/nil-dom-helpers#readme",
+    "homepage": "https://github.com/bplokjs/dom-utils#readme",
     "devDependencies": {
         "@babel/core": "^7.0.0",
         "babel-core": "^6.26.3",
