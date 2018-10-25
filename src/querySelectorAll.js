@@ -5,7 +5,7 @@ let simpleSelectorRE = /^[\w-]*$/;
 //[].slice.call(arraylike) -> ↓
 let toArray = Function.prototype.bind.call(Function.prototype.call, [].slice);//toArray = [].slice.call.bind([].slice)
 
-export default function qsa(element, selector) {
+module.exports = function qsa(element, selector) {
     var maybeID = selector[0] === '#'
         , maybeClass = selector[0] === '.'
         , nameOnly = (maybeID || maybeClass) ? selector.slice(1) : selector

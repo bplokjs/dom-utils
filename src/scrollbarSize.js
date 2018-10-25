@@ -1,6 +1,6 @@
 let size;
 
-export default function scrollbarSize(recalc) {
+module.exports = function scrollbarSize(recalc) {
     if ((!size && size !== 0) || recalc) {
         const scrollDiv = document.createElement('div');
 

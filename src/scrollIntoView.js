@@ -1,7 +1,7 @@
 import getScrollParent from './scrollParent';
 import offset from './offset';
 
-export default function scrollIntoView(el, scrollParent) {
+module.exports = function scrollIntoView(el, scrollParent) {
     const scrollview = scrollParent || getScrollParent(el);
 
     const pOffset = offset(scrollview);

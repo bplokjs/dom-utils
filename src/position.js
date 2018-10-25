@@ -3,7 +3,7 @@ import getOffset from './offset/getOffset';
 import scrollTop from './util/scrollTop';
 import scrollLeft from './util/scrollLeft';
 
-export default function position(elem) {
+module.exports = function position(elem) {
     var offsetParent, offset, doc,
         parentOffset = { top: 0, left: 0 };
 

@@ -1,6 +1,6 @@
 import css from './css';
 
-export default function scrollPrarent(node, dir = 'y') {
+module.exports = function scrollPrarent(node, dir = 'y') {
     const position = css(node, 'position')
         , excludeStatic = position === 'absolute'
         , ownerDoc = node.ownerDocument

@@ -3,4 +3,4 @@ import off from './off'
 import filter from './filter'
 import listen from './listen'
 
-export default { on, off, filter, listen }
+module.exports = { on, off, filter, listen }

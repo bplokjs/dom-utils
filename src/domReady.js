@@ -1,5 +1,5 @@
 
-export default function domReady(fn) {
+module.exports = function domReady(fn) {
     function trigger() {
         window.document.removeEventListener('DOMContentLoaded', trigger);
         window.removeEventListener('load', trigger);
