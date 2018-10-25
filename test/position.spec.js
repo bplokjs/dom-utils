@@ -1,4 +1,4 @@
-const position = require('../lib/position').default;
+const position = require('../lib/position');
 
 describe('scrollIntoView', () => {
 

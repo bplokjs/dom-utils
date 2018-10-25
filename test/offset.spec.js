@@ -1,4 +1,4 @@
-const offset = require('../lib/offset').default;
+const offset = require('../lib/offset');
 
 describe('scrollIntoView', () => {
 

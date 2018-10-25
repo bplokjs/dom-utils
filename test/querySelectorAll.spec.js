@@ -1,11 +1,11 @@
-const qsa = require('../lib/querySelectorAll').default;
+const qsa = require('../lib/querySelectorAll');
 
 describe('Query helpers', () => {
 
-  describe('QuerySelectorAll', () => {
+    describe('QuerySelectorAll', () => {
 
-    beforeEach(() => {
-      document.body.innerHTML = `
+        beforeEach(() => {
+            document.body.innerHTML = `
         <div>
         <div class='item-class'>
           <ul id='ListID'>
@@ -16,16 +16,16 @@ describe('Query helpers', () => {
         </div>
       </div>
       `
-    })
+        })
 
-    it("QuerySelectorAll", () => {
-      expect(qsa(document, 'li').length).toEqual(3)
-      expect(qsa(document, '#ListID').length).toBe(1)
-      expect(qsa(document, '.item-class').length).toEqual(1)
-      expect(qsa(document, '.item-class li').length).toEqual(3)
-      expect(qsa(document, '.item-class li:not(.odd)').length).toEqual(2)
-    })
+        it("QuerySelectorAll", () => {
+            expect(qsa(document, 'li').length).toEqual(3)
+            expect(qsa(document, '#ListID').length).toBe(1)
+            expect(qsa(document, '.item-class').length).toEqual(1)
+            expect(qsa(document, '.item-class li').length).toEqual(3)
+            expect(qsa(document, '.item-class li:not(.odd)').length).toEqual(2)
+        })
 
-  })
+    })
 
 })

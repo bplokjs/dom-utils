@@ -1,5 +1,5 @@
 
-var evt = require('../lib/events').default
+var evt = require('../lib/events')
     , simulant = require('simulant')
     , unlisten
 

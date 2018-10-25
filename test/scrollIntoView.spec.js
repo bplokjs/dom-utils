@@ -1,4 +1,4 @@
-const scrollIntoView = require('../lib/scrollIntoView').default;
+const scrollIntoView = require('../lib/scrollIntoView');
 
 describe('scrollIntoView', () => {
 

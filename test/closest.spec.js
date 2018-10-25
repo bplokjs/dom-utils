@@ -1,8 +1,8 @@
-const closest = require('../lib/closest').default;
+const closest = require('../lib/closest');
 
 describe('Closest', () => {
-	beforeEach(() => {
-		document.body.innerHTML = `
+    beforeEach(() => {
+        document.body.innerHTML = `
         <div>
 		<div id='item-1'>
 			<div id='item-2'>
@@ -30,14 +30,14 @@ describe('Closest', () => {
 		</div>
 		</div>
       `
-	})
+    })
 
-	it('find Closest node', () => {
-		var child = document.getElementById('item-3')
-			, parent = document.getElementById('item-1');
+    it('find Closest node', () => {
+        var child = document.getElementById('item-3')
+            , parent = document.getElementById('item-1');
 
-		expect(closest(child, '#item-1')).toEqual(parent)
-		expect(closest(child, '#item-40')).toBeNull()
-	})
+        expect(closest(child, '#item-1')).toEqual(parent)
+        expect(closest(child, '#item-40')).toBeNull()
+    })
 
 })
