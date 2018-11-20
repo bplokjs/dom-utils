@@ -7,7 +7,7 @@
         "copy1": "transform-es  package.json -f lib/package.json",
         "copy2": "transform-es  README.md -f lib/README.md",
         "transform": "transform-es src -d lib -c",
-        "prepublish": "npm-run-all transform copy1 copy2",
+        "upload": "npm-run-all transform copy1 copy2",
         "start": "transform-es src -d lib -c -w",
         "test": "node ./node_modules/karma/bin/karma start karam.conf.js"
     },
