@@ -16,6 +16,10 @@
         "url": "git+https://github.com/bplokjs/dom-utils.git"
     },
     "files": [
+        "events",
+        "offset",
+        "util",
+        "events",
         "*.js",
         "*.md"
     ],
