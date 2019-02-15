@@ -17,7 +17,7 @@ module.exports = function scrollIntoView(el, scrollParent) {
     const sTop = scrollview.scrollTop,
         sLeft = scrollview.scrollLeft;
 
-    let left, top;
+    let left = sLeft, top = sTop;
 
     if (pTop > tTop) {
         top = sTop - (pTop - tTop);
@@ -30,9 +30,13 @@ module.exports = function scrollIntoView(el, scrollParent) {
     } else if (pRight < (tLeft + el.offsetWidth)) {
         left = sLeft + tLeft - pRight + Math.min(el.offsetWidth, scrollview.clientWidth);
     }
+    if (top !== sTop) {
+        scrollview.scrollTop = top;
+    }
 
-    scrollview.scrollTop = top;
-    scrollview.scrollLeft = left;
+    if (left !== sLeft) {
+        scrollview.scrollLeft = left;
+    }
 
     return { left, top };
 }
