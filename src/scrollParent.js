@@ -7,7 +7,7 @@ module.exports = function scrollPrarent(node, dir = 'y') {
         , overflowRegex = /(auto|scroll)/;
 
     if (position === 'fixed')
-        return ownerDoc || document;
+        return (ownerDoc || document).documentElement;
 
     while ((node = node.parentNode) && node.nodeType !== 9) {
 
@@ -26,5 +26,5 @@ module.exports = function scrollPrarent(node, dir = 'y') {
             return node;
     }
 
-    return document;
+    return document.documentElement;
 }
